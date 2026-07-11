@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # 1. PARÂMETROS DO CIRCUITO (Valores Reais)
 # =============================================================================
 R4 = 1e6        # 1 MΩ (Resistência de polarização/filtro de entrada)
-C3 = 0.22e-6    # 0.22 µF (Capacitância de acoplamento de entrada)
+C3 = 1.5e-6    # 1.5 µF (Capacitância de acoplamento de entrada)
 R5 = 100e3      # 100 kΩ (Resistência de realimentação do estágio de ganho)
 R6 = 1e3        # 1 kΩ (Resistência de ganho do estágio diferencial)
 C4 = 1.5e-9     # 1.5 nF (Capacitância de compensação em paralelo com R5)
@@ -94,8 +94,8 @@ ax1.text(f_lower_sim * 1.3, cutoff_threshold - 4, f'{f_lower_sim:.3f} Hz', color
 ax1.text(f_upper_sim * 0.3, cutoff_threshold - 4, f'{f_upper_sim:.1f} Hz', color='red', weight='bold')
 
 # Linhas de referência para valores teóricos
-ax1.axvline(0.72, color='green', linestyle=':', linewidth=1.5, label='Corte Teórico Inferior (0.72 Hz)')
-ax1.axvline(106.0, color='purple', linestyle=':', linewidth=1.5, label='Corte Teórico Superior (106 Hz)')
+ax1.axvline(0.106, color='green', linestyle=':', linewidth=1.5, label='Corte Teórico Inferior (0.106 Hz)')
+ax1.axvline(106.0, color='purple', linestyle=':', linewidth=1.5, label='Corte Teórico Superior (105 Hz)')
 
 ax1.set_ylabel('Magnitude (dB)', fontsize=11)
 ax1.set_title('Diagrama de Bode - Estágio Amplificador Diferencial para ECG/EEG', fontsize=13, weight='bold')
